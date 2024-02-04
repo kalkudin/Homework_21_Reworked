@@ -31,7 +31,6 @@ class ShopItemRecyclerAdapter : ListAdapter<ShopItem, ShopItemRecyclerAdapter.Sh
                     .into(icImage)
                 icHeart.visibility = if (item.favorite == ShopItem.Favorite.FAVORITE) View.VISIBLE else View.GONE
             }
-
         }
     }
 

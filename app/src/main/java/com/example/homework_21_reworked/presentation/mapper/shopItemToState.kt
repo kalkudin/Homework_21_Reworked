@@ -11,16 +11,6 @@ fun shopItemToState(shopItem: ShopItemInfo): ShopItem {
         price = shopItem.price,
         title = shopItem.title,
         favorite = if (shopItem.favorite) ShopItem.Favorite.FAVORITE else ShopItem.Favorite.NOT_FAVORITE,
-        category = mapCategory(shopItem.category)
+        category = shopItem.category
     )
-}
-
-private fun mapCategory(category: String): ShopItem.ItemCategory {
-    return when (category.uppercase(Locale.ROOT)) {
-        "PARDY" -> ShopItem.ItemCategory.PARTY
-        "CAMPING" -> ShopItem.ItemCategory.CAMPING
-        "BLOUSE" -> ShopItem.ItemCategory.BLOUSE
-        "HIKING" -> ShopItem.ItemCategory.HIKING
-        else -> throw IllegalArgumentException("Unknown category: $category")
-    }
 }

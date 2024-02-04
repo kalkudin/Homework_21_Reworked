@@ -11,7 +11,7 @@ import javax.inject.Inject
 class NetworkStatusTracker @Inject constructor(context: Context) : NetworkChecker {
 
     private val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-    private val _networkStatus = MutableStateFlow<Boolean>(isConnected())
+    private val _networkStatus = MutableStateFlow(isConnected())
 
     private val networkCallback = object : ConnectivityManager.NetworkCallback() {
         override fun onAvailable(network: Network) {

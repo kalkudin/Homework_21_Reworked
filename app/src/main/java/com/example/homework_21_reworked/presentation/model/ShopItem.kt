@@ -6,17 +6,10 @@ data class ShopItem(
     val price : String,
     val title : String,
     val favorite : Favorite,
-    val category : ItemCategory
+    val category : String
 ) {
     enum class Favorite {
         FAVORITE,
         NOT_FAVORITE
-    }
-
-    enum class ItemCategory {
-        PARTY,
-        CAMPING,
-        BLOUSE,
-        HIKING
     }
 }

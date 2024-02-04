@@ -6,4 +6,5 @@
     <color name="gradient_bottom">#1F2E35</color>
     <color name="text_color">#96A7AF</color>
     <color name="item_box_color">#EDF1FA</color>
+    <color name="filter_box_color">#30444E</color>
 </resources>
